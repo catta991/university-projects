@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <item name="colorPrimary">@color/cookery_blue</item>
+        <item name="colorPrimaryDark">@color/cookery_blue</item>
+        <item name="colorAccent">@color/cookery_blue</item>
+        <item name="android:colorEdgeEffect">@color/cookery_blue</item>
+    </style>
+
+</resources>

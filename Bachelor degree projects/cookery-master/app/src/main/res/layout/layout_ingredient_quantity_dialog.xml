@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_ingredient_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    >
+
+
+
+        <LinearLayout
+            android:id="@+id/layoutIngredientAddIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_shape_v3"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+
+            <TextView
+                android:id="@+id/IngredientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:textSize="22sp" />
+
+
+            <EditText
+                android:id="@+id/IngredientEditText"
+                android:layout_width="175dp"
+                android:layout_height="48dp"
+                android:layout_above="@+id/deleteIngredientButton"
+                android:layout_below="@id/IngredientName"
+                android:layout_marginVertical="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_shape"
+                android:hint="@string/ingredient_hint_string"
+                android:layout_marginLeft="15dp"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:padding="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/tipe_pantry_spinner" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/deleteIngredientButton"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@id/addIngredientButton"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/delete_button"
+                    android:backgroundTint="@color/cookery_blue"
+                    app:layout_constraintBottom_toBottomOf="@+id/addIngredientButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addIngredientButton" />
+
+                <Button
+                    android:id="@+id/addIngredientButton"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="80dp"
+                    android:backgroundTint="@color/cookery_blue"
+                    android:text="@string/add_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/deleteIngredientButton"
+                    app:layout_constraintTop_toBottomOf="@+id/IngredientEditText" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>

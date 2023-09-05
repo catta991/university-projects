@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AlimentarPreferenceActivity">
+
+
+<RelativeLayout
+    android:id="@+id/alimentarPreferences"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AlimentarPreferenceActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/cookery_blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/hamburger" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="@string/alimentar_preference"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutToolBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/checkboxContainerIntollerances"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutToolBar"
+                android:layout_marginTop="15dp"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/IntollerancesTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/intollerance_string"
+                        android:textSize="25sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceGluten"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/IntollerancesTextView"
+                        android:text="@string/gluten_intolerance" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntollerancePenaut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceGluten"
+                        android:text="@string/penaut_intollerance" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceDairy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntollerancePenaut"
+                        android:text="@string/lactose_intollerance" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceTreeNuts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceDairy"
+                        android:text="@string/nuts_intollerance" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceEgg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceTreeNuts"
+                        android:text="@string/egg_intollerance" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceGrain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceEgg"
+                        android:text="@string/grain_intollerance" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceSeaFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceGrain"
+                        android:text="@string/Seafood_intollerance" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceSesame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceSeaFood"
+                        android:text="@string/Sesame_intollerance" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceShellyfish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceSesame"
+                        android:text="@string/Shellfish_intollerance" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceSoy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceShellyfish"
+                        android:text="@string/Soy_intollerance" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceSulfite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceSoy"
+                        android:text="@string/Sulfite_intollerance" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxIntolleranceWheat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxIntolleranceSulfite"
+                        android:text="@string/Wheat_intollerance" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/checkboxContainerPreferences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkboxContainerIntollerances"
+                android:layout_marginTop="20dp"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/PreferencesTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/preferences_string"
+                        android:textSize="25sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPreferencesVegetarian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/PreferencesTextView"
+                        android:text="@string/vegetarian_string" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxPreferencesVegan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxPreferencesVegetarian"
+                        android:text="@string/vegan_string" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPreferencesPescetarian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkboxPreferencesVegan"
+                        android:text="@string/pescetarian_string" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPreferencesGlutenFree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxPreferencesPescetarian"
+                        android:text="@string/glutenFree_string" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPreferencesKetogenic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxPreferencesGlutenFree"
+                        android:text="@string/Ketogenic_string" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPreferencesPaleo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkBoxPreferencesKetogenic"
+                        android:text="@string/Paleo_string" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/cookery_blue"
+                android:enabled="true"
+                android:text="@string/save_string"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_menu_header"
+        app:menu="@menu/drawer_nav_menu" >
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

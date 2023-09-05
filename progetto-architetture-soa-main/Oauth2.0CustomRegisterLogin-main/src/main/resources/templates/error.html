@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="bootstrap-social.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(https://i.ibb.co/VQmtgjh/6845078.png) no-repeat;
+            height: 100vh;
+            font-family: sans-serif;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: hidden
+        }
+
+        @media screen and (max-width: 600px;) {
+            body {
+                background-size: cover;: fixed
+            }
+        }
+
+        #particles-js {
+            height: 100%
+        }
+
+        .loginBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0.9;
+            transform: translate(-50%, -50%);
+            width: 1200px;
+            min-height: 680px;
+            background: #CFD8DC;
+            border-radius: 10px;
+            padding: 40px;
+            box-sizing: border-box
+        }
+
+        .loginBox a {
+            color: #262626;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            display: block
+        }
+
+        a:hover {
+            color: #0000ff
+        }
+
+        p {
+            color: #0000ff
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+
+</head>
+
+
+<div class="loginBox">
+    <!--    <h2>...Something went wrong...</h2>-->
+    <img class="center"
+         src="https://cdni.iconscout.com/illustration/premium/thumb/something-went-wrong-2511607-2133695.png"
+         height="600px" width="600px">
+    <hr class="my-4">
+
+    <h5><a href="#" id="go-back" style="color: #59238FFF"> Click here for dashboard</a></h5>
+</div>
+
+<script>
+    document.getElementById("go-back").addEventListener("click", () => {
+        history.back();
+    });
+</script>
+
+</html>

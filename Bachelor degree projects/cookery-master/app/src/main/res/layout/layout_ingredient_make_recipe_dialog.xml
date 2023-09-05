@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_ingredient_dialogV2"
+    android:layout_width="wrap_content"
+    android:layout_height="150dp"
+    android:background="@drawable/rounded_shape_v3"
+    >
+
+
+
+        <RelativeLayout
+            android:id="@+id/layoutIngredientAddIngredientV2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+
+            <TextView
+                android:id="@+id/IngredientNameV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/IngredientEditTextV2"
+                android:layout_alignStart="@+id/IngredientEditTextV2"
+                android:layout_alignEnd="@+id/IngredientEditTextV2"
+                android:gravity="center">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/IngredientEditTextV2"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_shape"
+                android:gravity="center"
+                android:hint="@string/ingredient_hint_string"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:padding="6dp" />
+
+
+            <Spinner
+                android:id="@+id/measureUnitSpinnerV2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginLeft="37dp"
+                android:layout_toEndOf="@+id/IngredientEditTextV2"
+                android:layout_toRightOf="@id/IngredientEditTextV2"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/deleteIngredientButtonV2"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/cookery_blue"
+                android:layout_below="@+id/IngredientEditTextV2"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/delete_button" />
+
+            <Button
+                android:id="@+id/addIngredientButtonV2"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/IngredientEditTextV2"
+                android:layout_marginLeft="110dp"
+                android:backgroundTint="@color/cookery_blue"
+                android:layout_marginTop="28dp"
+                android:layout_toRightOf="@id/deleteIngredientButtonV2"
+                android:text="@string/add_button" />
+
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

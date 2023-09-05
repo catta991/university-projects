@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/add_step_dialog"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="350dp"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_shape_v3">
+
+    <EditText
+        android:id="@+id/add_step_et"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:gravity="top"
+        android:layout_marginBottom="15dp"
+        android:inputType="textMultiLine"
+        android:background="@drawable/rounded_shape"
+        android:hint="@string/step_hint_string"
+        android:paddingLeft="6dp"
+        android:paddingTop="6dp"
+        android:scrollbars="vertical"
+
+
+        />
+
+    <Button
+        android:id="@+id/ingredient_dialog_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240dp"
+        android:layout_below="@id/add_step_et"
+        android:textAllCaps="false"
+        android:text="@string/save"
+        android:backgroundTint="@color/cookery_blue"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/ingredient_dialog_btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/cookery_blue"
+        android:layout_below="@id/add_step_et"
+        android:text="@string/delete_button"
+        android:layout_marginLeft="20dp"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

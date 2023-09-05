@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/add_ingredient_dialog"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="350dp"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_shape_v3">
+
+    <SearchView
+        android:id="@+id/ingredient_dialog_sv"
+        android:iconifiedByDefault="false"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:queryHint="Search ingredient"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_shape"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ingredient_dialog_rv"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ingredient_dialog_sv"/>
+
+    <Button
+        android:id="@+id/ingredient_dialog_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240dp"
+        android:textAllCaps="false"
+        android:layout_below="@id/ingredient_dialog_rv"
+        android:text="Save"
+        android:backgroundTint="@color/cookery_blue"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/ingredient_dialog_btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ingredient_dialog_rv"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/cookery_blue"
+        android:text="@string/delete_button"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

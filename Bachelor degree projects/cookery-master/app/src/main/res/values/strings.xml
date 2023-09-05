@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">Cookery</string>
+    <string name="app_name_uppercase"> COOKERY</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- string array fro stepSpinner -->
+
+    <string-array name="steps">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>Appetizers</item>
+        <item>First course</item>
+        <item>Main meal</item>
+        <item>Side dish</item>
+        <item>Desserts</item>
+    </string-array>
+
+
+
+    <!-- strings per fragment my recipe -->
+    <string name="search_string">Search Here</string>
+    <string name="My_recipes_string">
+       <font size="20">My Recipes</font>
+    </string>
+    <string name="filter_string"> Filter </string>
+    <string name="MyRecipes_chips_string"> Add Recipe</string>
+    <string name="result_not_found">Result not found</string>
+
+    <!-- fine strings per fragment my recipe -->
+
+
+    <!-- strings per fragment alimentar preferences  -->
+
+    <string name="alimentar_preference">Alimentar Preferences</string>
+    <string name="intollerance_string">Intollerance</string>
+    <string name="preferences_string">Diet</string>
+    <string name="gluten_intolerance">Gluten</string>
+    <string name="lactose_intollerance">Dairy</string>
+    <string name="egg_intollerance">Egg</string>
+    <string name="penaut_intollerance">Penaut</string>
+    <string name="nuts_intollerance">Tree Nut</string>
+    <string name="grain_intollerance">Grain</string>
+    <string name="Seafood_intollerance">Seafood</string>
+    <string name="Sesame_intollerance">Sesame</string>
+    <string name="Shellfish_intollerance">Shellfish</string>
+    <string name="Soy_intollerance">Soy</string>
+    <string name="Sulfite_intollerance">Sulfite</string>
+    <string name="Wheat_intollerance">Wheat</string>
+    <string name="choose_category">Select a category:</string>
+
+    <string name="vegan_string">Vegan</string>
+    <string name="Ketogenic_string">Ketogenic</string>
+    <string name="Paleo_string">Paleo</string>
+    <string name="vegetarian_string">Vegetarian</string>
+    <string name="pescetarian_string">Pescetarian</string>
+    <string name="glutenFree_string">Gluten Free</string>
+
+    <string name="Update_email_pass">Update your profile email address and password here!</string>
+
+
+    <string name="save_string">Save</string>
+
+    <!-- fine strings per fragment alimentar preferences  -->
+
+
+    <!-- strings per dialog aggiunta ingredienti e step -->
+    <string name="step_string">Step</string>
+    <string name="add_button">Add</string>
+    <string name="delete_button">Delete</string>
+    <string name="step_hint_string">Write a step</string>
+    <string name="ingredient_hint_string">Insert a quantity</string>
+    <string name="invalid_quantity">Impossible to add this quantity</string>
+    <string name="invalid_step">Impossible to add an empty step</string>
+    <!-- fine strings per dialog aggiunta ingredienti e step -->
+
+   <!-- stringhe per home -->
+    <string name="home">Home</string>
+    <string name="fridge">Fridge</string>
+    <string name="recipe">Recipe</string>
+    <string name="Ready_to_cook">Ready to cook</string>
+    <string name="img_recipe">img_recipe</string>
+    <string name="first_courses">First courses</string>
+    <string name="main_courses">Main courses</string>
+    <string name="desserts">Desserts</string>
+    <!-- stringhe per home -->
+
+    <!-- strings for pantry -->
+    <string name="crea_una_lista_della_spesa">Create a shopping list</string>
+    <string name="my_pantry">My pantry</string>
+    <string name="my_fridge">My fridge</string>
+    <string name="search_an_ingredient">Search an ingredient</string>
+    <string name="pantry">Pantry</string>
+    <string name="freezer">Freezer</string>
+
+    <!-- fine strings for pantry -->
+
+    <!-- stringhe add pantry -->
+    <string name="insert_name">Insert name</string>
+    <string name="new_pantry_box">New Pantry Box</string>
+
+
+    <!-- strings MyProfileFragment -->
+
+    <string name="changeImageButton">Change image</string>
+    <string name="user">Username</string>
+    <string name="name">Nome</string>
+    <string name="surname">Surname</string>
+    <string name="mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="save">Save</string>
+    <string name="profile_image">Profile image</string>
+    <string name="passError">Password is not valid</string>
+    <string name="add_pantry">Add Pantry</string>
+    <string name="invalid_name">complie the camp</string>
+
+
+    <!-- fine strings MyProfileFragment -->
+
+
+    <!-- string retrofit -->
+
+    <string name="errorRetriveData">Error in retrieving data</string>
+    <string name="connectionError"> Something went wrong, pleas check your connection</string>
+
+    <!-- fine string retrofit -->
+
+
+    <!-- string singleRecipeActivity -->
+
+    <string name="noStepFoundString">NO STEP FOUND FOR THIS RECIPE</string>
+    <string name="ingredients_double_dot">Ingredients:</string>
+
+
+    <!-- fine string singleRecipeActivity -->
+
+
+    <!-- string mainActivity -->
+
+    <string name="csv_error"> ERROR IN CREATING INGREDIENT DATABASE</string>
+
+    <!-- fine string mainActivity -->
+
+
+    <!-- string makeRecipe -->
+    <string name="name_your_recipe">Name your recipe!</string>
+    <string name="make_your_recipe">Make your own recipe!</string>
+    <string name="number_of_servings">Number of servings:</string>
+    <string name="add_ingredients">Add ingredients</string>
+    <string name="add_steps">Add steps</string>
+    <string name="choose_image">Choose an image </string>
+    <string name="save_recipe">Save recipe</string>
+    <string name="empty_field">Step or ingredient are empty</string>
+    <!-- fine string makeRecipe -->
+
+    <!-- string registrazione e log-in -->
+    <string name="sign_up">Sign Up!</string>
+    <string name="email">Email address</string>
+    <string name="reenter_password">Reenter password</string>
+    <string name="register">REGISTER</string>
+    <string name="register_lowercase">Register</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">LOGIN</string>
+    <string name="verify_account">Check your email to verify your account</string>
+    <string name="wrong_credentials">Failed to login, check your credentials</string>
+    <string name="register_success">User has been registered</string>
+    <string name="register_fail">Registration has failed, try again</string>
+    <string name="update_mail">Email address has been updated</string>
+    <string name="update_mail_fail">Email address update has failed, try again</string>
+    <string name="update_password">Password has been updated</string>
+    <string name="update_password_fail">Password update has failed, try again</string>
+    <string name="your_profile">Your profile</string>
+    <string name="password_hint">Insert a new password here</string>
+
+
+
+    <!-- fine string registrazione e log-in-->
+
+
+
+
+
+</resources>

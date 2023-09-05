@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="bootstrap-social.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(https://i.ibb.co/VQmtgjh/6845078.png) no-repeat;
+            height: 100vh;
+            font-family: sans-serif;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: hidden
+        }
+
+        @media screen and (max-width: 600px;) {
+            body {
+                background-size: cover;: fixed
+            }
+        }
+
+        #particles-js {
+            height: 100%
+        }
+
+        .loginBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            min-height: 200px;
+            background: #000000;
+            border-radius: 10px;
+            padding: 40px;
+            box-sizing: border-box
+        }
+
+        .user {
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 20px
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0 0 20px;
+            color: #59238F;
+            text-align: center
+        }
+
+        .loginBox input {
+            width: 100%;
+            margin-bottom: 20px
+        }
+
+        .loginBox input[type="text"],
+        .loginBox input[type="password"] {
+            border: #262626;
+            border-bottom: 2px solid #0000fff;
+            outline: none;
+            height: 40px;
+            color: black;
+            background: #ffffff;
+            font-size: 16px;
+            padding-left: 20px;
+            box-sizing: border-box
+        }
+
+        .loginBox input[type="text"]:hover,
+        .loginBox input[type="password"]:hover {
+            color: black;
+            border: 1px solid #0000fff
+        }
+
+        .loginBox input[type="text"]:focus,
+        .loginBox input[type="password"]:focus {
+            border-bottom: 2px solid #0000fff
+        }
+
+        .inputBox {
+            position: relative
+        }
+
+        .inputBox span {
+            position: absolute;
+            top: 10px;
+            color: #262626
+        }
+
+        .loginBox input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            font-size: 16px;
+            background: #59238F;
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer
+        }
+
+        .loginBox a {
+            color: #59238F;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            display: block
+        }
+
+        a:hover {
+            color: #0000ff
+        }
+
+        p {
+            color: #0000ff
+        }
+
+
+    </style>
+
+</head>
+
+<div class="loginBox">
+
+    <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+    <h3>Register now</h3>
+    <form th:action="@{/registration}" method="post"
+          th:object="${user}">
+        <div class="inputBox">
+            <label class="control-label" for="firstName" style="color: #FFFFFF">First Name </label>
+            <input id="firstName" class="form-control"
+                   th:field="*{name}" required autofocus="autofocus"/>
+
+            <label class="control-label" for="email" style="color: #FFFFFF">Email</label>
+            <input id="email" class="form-control"
+                   th:field="*{email_id}" required autofocus="autofocus"/>
+            <div class="alert alert-danger" th:if="${param.emailError}">
+                <strong>Warning!</strong> email already used!
+            </div>
+
+            <label class="control-label" for="password" style="color: #FFFFFF">Password</label>
+            <input id="password" class="form-control" type="password"
+                   th:field="*{password}" required autofocus="autofocus"/>
+            <div class="alert alert-danger" th:if="${param.pwdError}">
+                <strong>Warning!</strong> password not strong enough!
+            </div>
+        </div>
+        <input type="submit" name="" value="Register">
+
+    </form>
+    <h5><a th:href="@{/login}"> Already a member? Click Here</a></h5>
+
+
+</div>
+
+</html>
