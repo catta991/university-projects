@@ -1,0 +1,21 @@
+.table-container-contact {
+  width: 970px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 55px;
+}
+
+#tableTitle {
+  text-align: left;
+
+  margin-left: 12px;
+}
+.box {
+  background: #20272e;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}

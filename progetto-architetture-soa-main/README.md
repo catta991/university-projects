@@ -18,6 +18,6 @@ catta991 federicaGraglia
 - css
 
 ### installation
-- setup keycloack (https://www.baeldung.com/spring-boot-keycloak)
+- setup keycloack ![keycloak setup guide](https://www.baeldung.com/spring-boot-keycloak)
 - modify the application.properties file
 - set the correct url in the LoginKeycloackController

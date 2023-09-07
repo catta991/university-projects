@@ -1,0 +1,19 @@
+.nav-item {
+  color: #505050;
+}
+
+.navbar {
+  background: rgba(19, 211, 137);
+}
+
+.navbar-brand {
+  color: #20272e;
+}
+
+.nav-item:hover {
+  color: black;
+}
+
+.nav-item.active {
+  color: black;
+}

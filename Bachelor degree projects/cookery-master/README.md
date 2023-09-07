@@ -4,6 +4,8 @@ The objective of the program is the implementation of an android application of 
 
 Users can add in the app the ingredients in their pantry, refrigerator and freezer and check them every time they need it (for example when they go to the grocery shop). The app will suggests some recipies based on the ingredients in the paintry and respecting user's allergies. Users can open the recipe sheet and the missing ingredient will be  automatically highlighted with a red color. Furthermore users will be able to create and save custom recipes
 
+![for more info read the documentation](documentazione_Cookery.pdf)
+
 Languages: Java
 
 ## installation

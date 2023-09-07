@@ -1,0 +1,132 @@
+version: '3.8'
+
+services: 
+
+  #scommentare per creare da 0 il db 
+    #User-db:
+      #container_name: mysql-monitoring-system-user-db
+      #restart: always
+      #image: mysql
+      #ports:
+       # - 3306:3306
+      #environment:
+         #MYSQL_ROOT_USER: username
+         #MYSQL_ROOT_PASSWORD: password
+         #MYSQL_DATABASE: db_name
+      
+      #networks: 
+      # - monitoring-system-network
+
+    Config-server:
+      container_name: monitoring-system-config-server-container
+      restart: always
+      image: config-server-image:1.0
+      build:
+        context: ./monitoring_system_springboot/monitoring-system-configServer
+        dockerfile: Dockerfile
+      ports:
+        - 8999:8999
+      networks: 
+       - monitoring-system-network
+
+
+    Api-Gateway:
+      container_name: api-gateway-microservice-container-prova
+      deploy:
+        restart_policy:
+          condition: on-failure
+          delay: 5s
+      image: api-gateway-image:1.0
+      build:
+        context: ./monitoring_system_springboot/authorization
+        dockerfile: Dockerfile
+      depends_on:
+        Config-server:
+          condition: service_started
+      ports:
+        - 8092:8092
+      networks: 
+       - monitoring-system-network
+
+
+    Host-Microservice:
+      container_name: host-microservice-container-prova
+      deploy:
+        restart_policy:
+          condition: on-failure
+          delay: 5s
+      image: host-microservice-image:1.0
+      build:
+        context: ./monitoring_system_springboot/host_microservice
+        dockerfile: Dockerfile
+      depends_on:
+        Config-server:
+          condition: service_started
+      ports:
+        - 8095:8095
+      volumes:
+       - /data/springboot-docker-compose-app3
+      networks: 
+        - monitoring-system-network
+
+    ContactGroups-Microservice:
+      container_name: contact-groups-microservice-container-prova
+      deploy:
+        restart_policy:
+          condition: on-failure
+          delay: 5s
+      image: contact-groups-microservice-image:1.0
+      build:
+        context: ./monitoring_system_springboot/contactgroup_microservice
+        dockerfile: Dockerfile
+      depends_on:
+        Config-server:
+          condition: service_started
+      ports:
+        - 8093:8093
+      volumes:
+       - /data/springboot-docker-compose-app4
+      networks: 
+        - monitoring-system-network
+
+    React-ui:
+      container_name: react-ui-container-prova
+      deploy:
+        restart_policy:
+          condition: on-failure
+          delay: 5s
+      image: ui-image-prova:1.0
+      build:
+        context: ./monitoring_system
+        dockerfile: Dockerfile
+      depends_on:
+        Config-server:
+          condition: service_started
+      ports:
+        - 3000:3000
+      networks: 
+        - monitoring-system-network
+      environment:
+        - CHOKIDAR_USEPOLLING=true
+    
+    User-Microservice:
+      container_name: user-microservice-container-prova
+      deploy:
+        restart_policy:
+          condition: on-failure
+          delay: 5s
+      image: user-microservice-image:1.0
+      build:
+        context: ./monitoring_system_springboot/user_auth
+        dockerfile: Dockerfile
+      depends_on:
+        Config-server:
+          condition: service_started
+      ports:
+        - 8091:8091
+      networks:
+       - monitoring-system-network
+
+networks:
+  monitoring-system-network:
+    external: true
