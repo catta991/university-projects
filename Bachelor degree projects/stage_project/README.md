@@ -4,7 +4,7 @@ This project was realized during the bachelor degree stage (duration 3 months)
 
 The application is an exetension of CheckMk basic functionalities.
 
-![for more info read the descriptio document](description.pdf)
+![for more info read the description document](description.pdf)
 
 
 ## architecture
