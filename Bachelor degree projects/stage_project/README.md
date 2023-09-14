@@ -19,7 +19,7 @@ It has a microservice architecture:
 
 - **user auth micorservice**: manage the crud operation on users and their registration and authentication
 
-- **configuratin server**: provide some information like CheckMk endpoint url, database password and more to the microservice retrived from a private github repository
+- **configuratin server**: provide some information like CheckMk endpoint url, database password and more to microservices. This information are retrived from a private github repository
 
 ![for more info see the architecture diagram](architecture_diagram.jpg)
 
