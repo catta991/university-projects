@@ -11,7 +11,7 @@ The application is an exetension of CheckMk basic functionalities.
 
 It has a microservice architecture:
 
-- **api gateway microservice**: checks if the JWT token in the request is valid and if the user has theauthority to make the request. If yes this micorservice will forward the request to the responsible microservice, otherwise rejects the request
+- **api gateway microservice**: checks if the JWT token in the request is valid and if the user has the authority to make the request. If yes this micorservice will forward the request to the responsible microservice, otherwise rejects the request
 
 - **contactgroup microservice**:  manage the CRUD operation on contactgroups
 
