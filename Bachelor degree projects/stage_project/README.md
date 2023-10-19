@@ -1,6 +1,6 @@
 # stage-project
 
-This project was realized during the bachelor degree stage (duration 3 months)
+This project was realized during the bachelor degree company internship (duration 3 months)
 
 The application is an exetension of CheckMk basic functionalities.
 
